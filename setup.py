@@ -11,7 +11,7 @@ PROJECT_URLS = {
 
 setup(
     name="flake8-os-walk",
-    version="0.1.0",
+    version="0.3.0",
     description="Flake8 plugin which usage of os.walk().",
     author="Asher Foa",
     author_email="asher@asherfoa.com",
