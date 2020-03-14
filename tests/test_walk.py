@@ -3,7 +3,7 @@ from sys import version_info
 from textwrap import dedent
 
 
-from flake8_os_walk import OsWalkVisitor
+from flake8_os_walk.checker import OsWalkVisitor
 
 
 def test_os_walk_func_bad_usage():

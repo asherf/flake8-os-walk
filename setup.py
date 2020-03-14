@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from setuptools import find_packages, setup
+from setuptools import setup
 
 with open("README.md") as fl:
     LONG_DESCRIPTION = fl.read()
@@ -11,7 +11,7 @@ PROJECT_URLS = {
 
 setup(
     name="flake8-os-walk",
-    version="0.3.0",
+    version="0.4.0",
     description="Flake8 plugin which usage of os.walk().",
     author="Asher Foa",
     author_email="asher@asherfoa.com",
@@ -19,9 +19,9 @@ setup(
     long_description=LONG_DESCRIPTION,
     project_urls=PROJECT_URLS,
     long_description_content_type="text/markdown",
-    packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
+    packages=["flake8_os_walk"],
     keywords="flake8",
-    entry_points={"flake8.extension": ["OW = flake8_os_walk:OSWalkChecker"]},
+    entry_points={"flake8.extension": ["OW = flake8_os_walk.checker:OSWalkChecker"]},
     install_requires=["flake8>=3.7"],
     tests_require=["coverage", "pytest"],
     classifiers=[
